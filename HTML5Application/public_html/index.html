@@ -2,87 +2,115 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Alex test</title>
-    <meta charset="utf-8">
+    <head>
+        <title>Alex test</title>
+        <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- import bootstrap vanaf CDN, zodat je niet alles hoeft te importen in je project -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!-- import defaultcss, staat een fix in voor de navbar -->
-    <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</head>
-<body>
-<!-- Navigatie bar, iverse = zwart -->
-<nav class="navbar navbar-inverse" >
-    <div class="container-fluid">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- import bootstrap vanaf CDN, zodat je niet alles hoeft te importen in je project -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- import defaultcss, staat een fix in voor de navbar -->
+        <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
+    <body>
 
-        <!-- collapse button voor mobiele versies -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarItems">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>  
-            </button>
-            <!-- Logo -->
-            <a href="#" class="navbar-brand">Van der wal</a>
-        </div>
 
-        <!-- Menu Items -->
-        <!-- voor mobiel -->
-        <div class="collapse navbar-collapse" id="navbarItems">
-        <div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <!-- drop down menu -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Taart<span class="caret"></span></a>
-                    <ul class ="dropdown-menu">
-                        <li><a href="#">Hoi </a></li>
-                    </ul>        
-                </li>
-                    
-            </ul>
-        </div>
+        <!-- Navigatie bar, iverse = zwart -->
 
-    </div>
-</nav>
-<!-- container voor body -->
-<div class="container">
-    <h3> popup demo! </h3>
-    
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#testModal">Klik mij</button>
-    
-    <!-- de modal voor de button -->
-    <div class="modal fade" id="testModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- header -->
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title">Demo</h3>
+        <nav class="navbar navbar-inverse" >
+            <div class="container-fluid">
+
+                <!-- collapse button voor mobiele versies -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarItems">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>  
+                    </button>
+                    <!-- Logo -->
+                    <a href="#" class="navbar-brand">Van der wal</a>
                 </div>
-                <!-- body -->
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Hoi">
+
+                <!-- Menu Items -->
+                <!-- voor mobiel -->
+                <div class="collapse navbar-collapse" id="navbarItems">
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <!-- drop down menu -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Taart<span class="caret"></span></a>
+                                <ul class ="dropdown-menu">
+                                    <li><a href="#">Hoi </a></li>
+                                </ul>        
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+        </nav>
+
+        <div id="wrapper">
+            <div id="sidebar-wrapper">
+                <ul id="sidebar_menu" class="sidebar-nav">
+                    <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+                </ul>
+                <ul class="sidebar-nav" id="sidebar">     
+                    <li><a>Link1<span class="sub_icon glyphicon glyphicon-flash"></span></a></li>
+                    <li><a>link2<span class="sub_icon glyphicon glyphicon-paperclip"></span></a></li>
+                </ul>
+            </div>
+            <!-- container voor body -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <h3> popup demo! </h3>
+
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#testModal">Klik mij</button>
+                    <h3> Tooltip demo! </h3>
+                    <!-- tooltip demo -->
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Dit is een mooie tooltip!">Tooltip on top</button>
+                    <!-- de modal voor de button -->
+                    <div class="modal fade" id="testModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- header -->
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title">Demo</h3>
+                                </div>
+                                <!-- body -->
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Hoi">
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <!-- footer (button) -->
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary btn-block">wajo mooi niet</button>
+                                </div> 
+                            </div>
                         </div>
-                        
-                    </form>
+                    </div>
                 </div>
-                <!-- footer (button) -->
-                <div class="modal-footer">
-                    <button class="btn btn-primary btn-block">wajo mooi niet</button>
-                </div> 
-           </div>
+            </div>
         </div>
-    </div>
-</div>
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("active");
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
 
-</body>
+    </body>
 </html>
