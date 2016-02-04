@@ -12,6 +12,14 @@
     margin-left:0px;
     margin-right:0px;
 }
+#header_icon{
+    height:50px;
+    width:50px;
+    margin-right:5px;
+    margin-left:0px;
+}
+
+
 
 #wrapper {
     padding-left: 70px;
