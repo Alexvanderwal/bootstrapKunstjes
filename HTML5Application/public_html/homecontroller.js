@@ -65,4 +65,9 @@ angular.module('ui.bootstrap.demo').controller('ModalInstanceCtrl', function ($s
   $scope.cancel = function () {
     $uibModalInstance.dismiss('cancel');
   };
+  
 });
+angular.module('ui.bootstrap.demo').controller('leftNavBarCtrl', function ($scope, $uibModal, $log) {
+        $scope.showNav = false;
+    
+    });
