@@ -1,21 +1,31 @@
 
 
 <!DOCTYPE html>
-<html lang="en" ng-app="ui.bootstrap.demo">
+<!-- default pagina, alleen header & footer komt hierop -->
+<html lang="en" ng-app="AlexsWebsite">
     <head>
+
         <title>Alex test</title>
+        <base href="/HTML5Application/">
         <meta charset="utf-8">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- import bootstrap vanaf CDN, zodat je niet alles hoeft te importen in je project -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- import defaultcss, staat een fix in voor de navbar -->
         <link rel="stylesheet" type="text/css" href="assets/css/default.css" />
         <!-- import angular-ui & alle angular componenten -->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+        <script src="app/app.js" type="text/javascript" ></script>
+
+
         <!-- de Controller -->
-        <script src="homecontroller.js"></script>
+
     </head>
     <body>
 
@@ -33,9 +43,9 @@
                         <span class="icon-bar"></span>  
                     </button>
                     <!-- Logo met een leuk plaatje, wie houd er nou niet van plaatjes. Ik wel! -->
-                     <a href="#" class="pull-left"><img id="header_icon" src="tumblr_static_profilesmall.jpg" ></a>
+                    <a href="#" class="pull-left"><img id="header_icon" src="assets/images/tumblr_static_profilesmall.jpg" ></a>
                     <a href="#" class="navbar-brand"><span class="icon-bar"></span>  Van der wal</a>
-                   
+
                 </div>
 
                 <!-- Menu Items -->
@@ -70,46 +80,12 @@
                     <li><a>link2<span class="sub_icon glyphicon glyphicon-paperclip"></span></a></li>
                 </ul>
             </div>
+
             <!-- container voor body -->
 
-            <div class="container-fluid">
-                <!-- Locaties ophalen via google maps API -->
-                <div id="page-content-wrapper" ng-controller="TypeaheadCtrl">
-                    <h4>Asynchronous results</h4>
-                    <pre>Model: {{asyncSelected| json}}</pre>
-                    <input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" uib-typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-                    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
-                    <div ng-show="noResults">
-                        <i class="glyphicon glyphicon-remove"></i> No Results Found
-                    </div>
-                </div>
-                <!-- Popup modal gedaan met Angular BootstrapUI-->
-                <h3> popup demo! </h3>
-                <div ng-controller="ModalDemoCtrl">
-                    <script type="text/ng-template" id="myModalContent.html">
-                        <div class="modal-header">
-                        <h3 class="modal-title">I'm a modal!</h3>
-                        </div>
-                        <div class="modal-body">
-                        <ul>
-                        <li ng-repeat="item in items">
-                        <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
-                        </li>
-                        </ul>
-                        Selected: <b>{{ selected.item }}</b>
-                        </div>
-                        <div class="modal-footer">
-                        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-                        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-                        </div>
-                    </script>
+            <div class="container-fluid" ng-controller="AppController">
 
-                    <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
-                    <button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
-                    <button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
-                    <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled}})</button>
-                    <div ng-show="selected">Selection from a modal: {{ selected}}</div>
-                </div>
+                <div ng-view></div>
             </div>
         </div>
 
