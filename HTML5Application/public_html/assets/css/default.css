@@ -1,6 +1,7 @@
 /* fix voor de borders in je navigatiebar */
 * {
-  border-radius: 0 !important;
+    border-radius: 0 !important;
+    font-family: 'Roboto';
 }
 body {
     margin-top:60px;
@@ -8,9 +9,9 @@ body {
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
- }
- 
- /* side bar */
+}
+
+/* side bar */
 .row{
     margin-left:0px;
     margin-right:0px;
@@ -65,7 +66,7 @@ body {
 }
 
 #page-content-wrapper {
-  width: 100%;
+    width: 100%;
 }
 
 #sidebar_menu li a, .sidebar-nav li a {
@@ -90,99 +91,99 @@ body {
 }
 
 .sidebar-nav li {
-  line-height: 40px;
-  text-indent: 20px;
+    line-height: 40px;
+    text-indent: 20px;
 }
 
 .sidebar-nav li a {
-  color: #999999;
-  display: block;
-  text-decoration: none;
+    color: #999999;
+    display: block;
+    text-decoration: none;
 }
 
 .sidebar-nav li a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.2);
-  text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    text-decoration: none;
 }
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .sidebar-nav > .sidebar-brand {
-  height: 65px;
-  line-height: 60px;
-  font-size: 18px;
+    height: 65px;
+    line-height: 60px;
+    font-size: 18px;
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+    color: #999999;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
-  background: none;
+    color: #fff;
+    background: none;
 }
 
 #main_icon
 {
-   float:right;
-   padding-right: 30px;
-   padding-top:20px;
+    float:right;
+    padding-right: 30px;
+    padding-top:20px;
 }
 .sub_icon
 {
-   float:right;
-   padding-right: 32px;
-   padding-top:10px;
+    float:right;
+    padding-right: 32px;
+    padding-top:10px;
 }
 .content-header {
-  height: 65px;
-  line-height: 65px;
+    height: 65px;
+    line-height: 65px;
 }
 
 .content-header h1 {
-  margin: 0;
-  margin-left: 20px;
-  line-height: 65px;
-  display: inline-block;
+    margin: 0;
+    margin-left: 20px;
+    line-height: 65px;
+    display: inline-block;
 }
 
 @media (max-width:767px) {
     #wrapper {
-    padding-left: 70px;
-    transition: all .4s ease 0s;
+        padding-left: 70px;
+        transition: all .4s ease 0s;
+    }
+    #sidebar-wrapper {
+        left: 70px;
+    }
+    #wrapper.active {
+        padding-left: 150px;
+    }
+    #wrapper.active #sidebar-wrapper {
+        left: 150px;
+        width: 150px;
+        transition: all .4s ease 0s;
+    }
 }
-#sidebar-wrapper {
-    left: 70px;
-}
-#wrapper.active {
-    padding-left: 150px;
-}
-#wrapper.active #sidebar-wrapper {
-    left: 150px;
-    width: 150px;
-    transition: all .4s ease 0s;
-}
-}
-  .typeahead-demo .custom-popup-wrapper {
+.typeahead-demo .custom-popup-wrapper {
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
     display: none;
     background-color: #f9f9f9;
-  }
+}
 
-  .typeahead-demo .custom-popup-wrapper > .message {
+.typeahead-demo .custom-popup-wrapper > .message {
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
     color: #868686;
-  }
+}
 
-  .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+.typeahead-demo .custom-popup-wrapper > .dropdown-menu {
     position: static;
     float: none;
     display: block;
@@ -191,5 +192,5 @@ body {
     border: none;
     border-radius: 0;
     box-shadow: none;
-  }
-  
+}
+
