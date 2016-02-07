@@ -27,7 +27,7 @@
         <!-- de Controller -->
 
     </head>
-    <body>
+    <body ng-controller="AppController">
         <header ng-include="'assets/partials/header.html'"></header>
         <div id="wrapper" ng-class="{'active': showNav, 'icon-autoscroll-disabled': !showNav}" ng-init="showNav=false">
             <div id="sidebar-wrapper">
@@ -42,7 +42,7 @@
 
             <!-- container voor body -->
 
-            <div class="container-fluid" ng-controller="AppController">
+            <div class="container-fluid">
 
                 <div ng-view></div>
             </div>

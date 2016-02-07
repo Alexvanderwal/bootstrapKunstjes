@@ -1,0 +1,17 @@
+<pre>Het pagina nummer {{currentPage}}, het aantal items per pagina {{itemsPerPage}}</pre>
+<table class="table table-bordred table-striped" >
+    <thead>
+    <th>Naam</th>
+    <th>Id</th>
+</thead>
+<tbody>
+    <tr ng-repeat="row in data.slice(((currentPage - 1) * itemsPerPage), ((currentPage) * itemsPerPage))">
+        <td>{{row.name}}</td>
+        <td>{{row.id}}</td>
+    </tr>
+</tbody>
+</table>
+View <select ng-model="viewby" ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
+
+<uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" items-per-page="itemsPerPage"></uib-pagination>
+<uib-pager total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></uib-pager>

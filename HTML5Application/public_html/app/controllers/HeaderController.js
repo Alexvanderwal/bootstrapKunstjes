@@ -1,13 +1,3 @@
-angular.module('AlexsWebsite').config(function($routeProvider)
-{
-    $routeProvider.when('/', { templateUrl: 'assets/partials/home.html', controller: 'HomeController' });
-    $routeProvider.when('/register', { templateUrl: 'assets/partials/registration.html', controller: 'RegistrationController' });
-    $routeProvider.when('/overview', { templateUrl: 'assets/partials/overview.html', controller: 'OverviewController' });
-    // Voeg hier meer routes toe
-    
-    $routeProvider.otherwise({ redirectTo: '/' });
-});
-
 angular.module('AlexsWebsite').controller('TypeaheadCtrl', function ($scope, $http) {
 
     $scope.getLocation = function (val) {
@@ -75,30 +65,4 @@ angular.module('AlexsWebsite').controller('ModalInstanceCtrl', function ($scope,
         $uibModalInstance.dismiss('cancel');
     };
 
-});
-
-
-angular.module('AlexsWebsite').controller('AppController', function ($scope, $location)
-{
-    $scope.isLocation = function (location)
-    {
-        return $location.path() === location;
-    };
-
-    $scope.gotoHome = function ()
-    {
-        $location.path('/');
-    };
-
-    $scope.gotoRegistration = function ()
-    {
-        $location.path('/register');
-    };
-
-    $scope.gotoOverview = function ()
-    {
-        $location.path('/overview');
-    };
-
-  
 });
