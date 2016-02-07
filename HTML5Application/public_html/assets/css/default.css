@@ -2,6 +2,9 @@
 * {
   border-radius: 0 !important;
 }
+body {
+    margin-top:60px;
+}
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -19,7 +22,8 @@
     margin-left:0px;
 }
 
-
+.navbar-collapse { 
+    backface-visibility: hidden; } 
 
 #wrapper {
     padding-left: 70px;
@@ -28,8 +32,8 @@
 }
 
 #sidebar-wrapper {
-    margin-left: -150px;
-    margin-top: -20px;
+    margin-left: -154px;
+    margin-top: -9px;
     left: 70px;
     width: 150px;
     background: #222;

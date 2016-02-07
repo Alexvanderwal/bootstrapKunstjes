@@ -76,10 +76,7 @@ angular.module('AlexsWebsite').controller('ModalInstanceCtrl', function ($scope,
     };
 
 });
-angular.module('AlexsWebsite').controller('leftNavBarCtrl', function ($scope, $uibModal, $log) {
-    $scope.showNav = false;
 
-});
 
 angular.module('AlexsWebsite').controller('AppController', function ($scope, $location)
 {

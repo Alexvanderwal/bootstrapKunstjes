@@ -28,49 +28,8 @@
 
     </head>
     <body>
-
-
-        <!-- Navigatie bar, iverse = zwart -->
-
-        <nav class="navbar navbar-inverse" >
-            <div class="container-fluid">
-
-                <!-- collapse button voor mobiele versies -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarItems">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>  
-                    </button>
-                    <!-- Logo met een leuk plaatje, wie houd er nou niet van plaatjes. Ik wel! -->
-                    <a href="#" class="pull-left"><img id="header_icon" src="assets/images/tumblr_static_profilesmall.jpg" ></a>
-                    <a href="#" class="navbar-brand"><span class="icon-bar"></span>  Van der wal</a>
-
-                </div>
-
-                <!-- Menu Items -->
-                <!-- voor mobiel -->
-                <div class="collapse navbar-collapse" id="navbarItems">
-                    <div>
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <!-- drop down menu -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Taart<span class="caret"></span></a>
-                                <ul class ="dropdown-menu">
-                                    <li><a href="#">Hoi </a></li>
-                                </ul>        
-                            </li>
-
-                        </ul>
-                    </div>
-
-                </div>
-        </nav>
-
-        <div id="wrapper" ng-class="{'active': showNav, 'icon-autoscroll-disabled': !showNav}" ng-controller="leftNavBarCtrl">
+        <header ng-include="'assets/partials/header.html'"></header>
+        <div id="wrapper" ng-class="{'active': showNav, 'icon-autoscroll-disabled': !showNav}" ng-init="showNav=false">
             <div id="sidebar-wrapper">
                 <ul id="sidebar_menu" class="sidebar-nav">
                     <li class="sidebar-brand" ng-click="showNav = !showNav"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>

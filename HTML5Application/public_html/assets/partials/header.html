@@ -1,0 +1,41 @@
+
+
+<!-- Navigatie bar, iverse = zwart -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid">
+
+        <!-- collapse button voor mobiele versies -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed" ng-init="isCollapsed = true">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>  
+            </button>
+            <!-- Logo met een leuk plaatje, wie houd er nou niet van plaatjes. Ik wel! -->
+            <a href="#" class="pull-left"><img id="header_icon" src="assets/images/tumblr_static_profilesmall.jpg" ></a>
+            <a href="#" class="navbar-brand"><span class="icon-bar"></span>  Van der wal</a>
+
+        </div>
+
+        <!-- Menu Items -->
+        <!-- voor mobiel -->
+        <!-- Minheight & margin zorgt ervoor dat de header niet flickert. is een gevolg van de manier waarop angular
+            het UIB component in laad, met de verwachting dat het height=0 is. -->
+        <div class="collapse navbar-collapse" uib-collapse="isCollapsed" style="min-height:50px; margin:auto;">
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <!-- drop down menu -->
+                    <li uib-dropdown><a href id="simple-dropdown" uib-dropdown-toggle>Angular Dropdown<span class="caret"></span></a>
+                        <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+                            <li><a href>Dropped yo nuts</a></li>
+                        </ul>        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
