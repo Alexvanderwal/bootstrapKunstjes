@@ -25,8 +25,8 @@
         <div class="collapse navbar-collapse" uib-collapse="isCollapsed" style="min-height:50px; margin:auto;">
             <div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href ng-click="gotoUsertable()">Users</a></li>
+                    <li role="presentation" ng-class="{ 'active' : isLocation('/') }"><a href ng-click="gotoHome()">Home</a></li>
+                    <li role="presentation" ng-class="{ 'active' : isLocation('/usertable') }"><a href ng-click="gotoUsertable()">Users</a></li>
                     <li><a href="#">Contact</a></li>
                     <!-- drop down menu -->
                     <li uib-dropdown><a href id="simple-dropdown" uib-dropdown-toggle>Angular Dropdown<span class="caret"></span></a>

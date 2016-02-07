@@ -3,6 +3,8 @@ angular.module('AlexsWebsite').controller('AppController', function($scope, $loc
 {
     $scope.isLocation = function(location)
     {
+        console.log(location);
+        console.log($location.path() === location);
         return $location.path() === location;
     };
     
