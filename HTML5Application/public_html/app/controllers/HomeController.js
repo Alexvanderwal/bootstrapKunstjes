@@ -44,11 +44,11 @@ angular.module('AlexsWebsite').controller('HomeController', function ($scope, $h
             });
         });
     };
-
+    //logica voor carousel
     //voegt een nieuwe slide toe, met een random image van lorempixel
     $scope.addSlide = function () {
         //zorgt voor telkens een nieuw plaatje, anders laad hij steeds de zelfde
-        var newWidth = 600 + slides.length + 1;
+        var newWidth = 500 + slides.length + 1;
         slides.push({
             image: 'http://lorempixel.com/' + newWidth + '/300/',
             text: ['Damn mooi plaatje', 'Deze is ook heel mooi', '9/11 would blow up again', 'Terrorisme is een mythe'][slides.length % 4],

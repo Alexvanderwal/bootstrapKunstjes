@@ -34,9 +34,9 @@
     <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled}})</button>
     <div ng-show="selected">Selection from a modal: {{ selected}}</div>
 <hr />
-<div style="height: 305px;width:500px">
+<div style="height: 305px;max-width:500px">
     <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-        <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+        <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id" class="img-responsive">
             <img ng-src="{{slide.image}}" style="margin:auto;">
             <div class="carousel-caption">
                 <h4>Slide {{slide.id}}</h4>
@@ -46,7 +46,7 @@
     </uib-carousel>
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="checkbox">
             <label>
                 <input type="checkbox" ng-model="noWrapSlides">
@@ -54,7 +54,7 @@
             </label>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
         Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
         <br />Enter a negative number or 0 to stop the interval.
     </div>

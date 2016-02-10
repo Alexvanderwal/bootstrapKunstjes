@@ -5,7 +5,9 @@
     <th>Id</th>
 </thead>
 <tbody>
+    
     <tr ng-repeat="row in data.slice(((currentPage - 1) * itemsPerPage), ((currentPage) * itemsPerPage))">
+
         <td>{{row.name}}</td>
         <td>{{row.id}}</td>
     </tr>

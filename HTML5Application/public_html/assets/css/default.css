@@ -6,9 +6,11 @@
 body {
     margin-top:60px;
 }
+@media (min-width: 768px) {
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
+}
 }
 
 /* side bar */
